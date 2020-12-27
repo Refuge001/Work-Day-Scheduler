@@ -5,11 +5,11 @@ $('.timecolor').each(function () {
   var currentHour = (moment().hour());
   var blockTime = parseInt($(this).attr('id'));
   if (currentHour === blockTime) {
-    $(this).addClass('present');
+    $(this.nextElementSibling).addClass('present');
   } else if (currentHour < blockTime) {
-    $(this).addClass('future');
+    $(this.nextElementSibling).addClass('future');
   } else if (currentHour > blockTime) {
-    $(this).addClass('past');
+    $(this.nextElementSibling).addClass('past');
   }
 }
 );
